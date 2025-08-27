@@ -99,12 +99,12 @@ When an attack experiment is completed, the attack records will be saved to the 
 ```shell
 # Print the ASR for epsilon threshold 0.02 at different query limits of different attack methods
 # Standard model
-python ./show_results.py print_ASR --dataset cifar10 --model resnet50 --method GuidedRay --norm inf --targeted 1 --test_num 1000 --max_query_count 10000 --pool_num 1 --augment_method mix --query_limit 300 500 1000 3000 5000 10000 --epsilons 0.02
+python ./analyze_results.py print_ASR --dataset cifar10 --model resnet50 --method GuidedRay --norm inf --targeted 1 --test_num 1000 --max_query_count 10000 --pool_num 1 --augment_method mix --query_limit 500 1000 3000 5000 10000 --epsilons 0.02
 # Defensive model
-python ./show_results.py print_ASR --dataset cifar10 --model resnet50 --method GuidedRay --norm inf --targeted 1 --test_num 1000 --max_query_count 10000 --pool_num 1 --augment_method mix --query_limit 1000 5000 10000 --epsilons 0.02  --defense_model adv_train
+python ./analyze_results.py print_ASR --dataset cifar10 --model resnet50 --method GuidedRay --norm inf --targeted 1 --test_num 1000 --max_query_count 10000 --pool_num 1 --augment_method mix --query_limit 1000 5000 10000 --epsilons 0.02  --defense_model adv_train
 
 # Print AvQ and MeQ
-python analyze_results.py print_early_stop_query --dataset cifar10 --model resnet50 --method GuidedRay --norm inf --targeted 1 --test_num 1000 --max_query_count 10000 --pool_num 1 --augment_method mix --query_limit 10000 --epsilons 0.02
+python ./analyze_results.py print_early_stop_query --dataset cifar10 --model resnet50 --method GuidedRay --norm inf --targeted 1 --test_num 1000 --max_query_count 10000 --pool_num 1 --augment_method mix --query_limit 10000 --epsilons 0.02
 ```
 
 ## Testing the Diversity of New Directions (Section 6.4.2 in the paper)
@@ -114,8 +114,8 @@ We write additional scripts to test and analyze the diversity of new directions 
 The script `attack_gen_directions.py` can generate Ray directions for different attacks and analyze the diversity of these new directions. Please run the following commands:
 
 ```shell
-python ./attack_gen_directions.py --dataset cifar10 --model resnet50 --test_num 1000 --num_directions 10000
-python ./attack_gen_directions.py --dataset cifar100 --model resnet50 --test_num 1000 --num_directions 10000
+python ./attack_gen_directions.py --dataset cifar10 --model resnet50 --test_num 1000 --num_directions 1000
+python ./attack_gen_directions.py --dataset cifar100 --model resnet50 --test_num 1000 --num_directions 1000
 python ./attack_gen_directions.py --dataset imagenet --model densenet121 --test_num 1000 --num_directions 1000
 ```
 
