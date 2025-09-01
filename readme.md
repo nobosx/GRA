@@ -1,6 +1,6 @@
-# GuidedRay: Surging Decision-based Adversarial Attacks via Diversity-Oriented Sampling
+# GuidedRay Attack
 
-This is the code repository of the paper "GuidedRay: Surging Decision-based Adversarial Attacks via Diversity-Oriented Sampling". Via this repository, users can reproduce the experimental results reported in our paper, such as conducting adversarial attack trials for different attack methods and several ablation experiments for our GuidedRay attack.
+This is the code repository of the paper "GuidedRay: Surging Decision-based Targeted Adversarial Attacks via Diversity-Oriented Sampling". Via this repository, users can reproduce the experimental results reported in our paper, such as conducting adversarial attack trials for different attack methods and several ablation experiments for our GuidedRay attack.
 
 ## Requirement
 
