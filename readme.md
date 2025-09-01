@@ -127,3 +127,6 @@ python ./attack_test_init.py --dataset cifar100 --model resnet50 --test_num 1000
 python ./attack_test_init.py --dataset imagenet --model densenet121 --test_num 1000 --max_query_count 10000
 ```
 
+## Downloading the ImageNet Dataset
+
+If you want to run attacks on the ImageNet dataset, please first download the  dataset file `imagenet.zip` from https://drive.google.com/file/d/1TI-Hp97pRCGANPTfr7kh2h56XbCvfS2z/view?usp=sharing and unzip it into the folder `./data`.
