@@ -5,7 +5,8 @@ from attackers.bounce_attacker import BounceAttacker
 from attackers.Tangent_attacker import TangentAttacker
 from attackers.SignOPTLinf_attacker import SignOPTLinfAttacker
 from attackers.RayST_attacker import RaySTAttacker
-from attackers.GuidedRayW_attacker import GuidedRayWAttacker
+from attackers.powerbounce_attacker import PowerBounceAttacker
+from attackers.fasttester_attacker import FastTesterAttacker
 from config import SUPPORTED_ATTACK_METHOD
 
 def build_concrete_attacker(victim_model, attack_config: dict):
@@ -44,10 +45,10 @@ def build_concrete_attacker(victim_model, attack_config: dict):
         if 'augment_method' in attack_config:
             attack_args['augment_method'] = attack_config['augment_method']
         attacker = GuidedRayAttacker(**attack_args)
-    elif attack_config['method'] == 'GuidedRay-W':
+    elif attack_config['method'] == 'fast_test':
         if 'augment_method' in attack_config:
             attack_args['augment_method'] = attack_config['augment_method']
-        attacker = GuidedRayWAttacker(**attack_args)
+        attacker = FastTesterAttacker(**attack_args)
     elif attack_config['method'] == 'HSJA':
         attacker = HSJAAttacker(**attack_args)
     elif attack_config['method'] == 'bounce':
@@ -58,4 +59,8 @@ def build_concrete_attacker(victim_model, attack_config: dict):
         attacker = SignOPTLinfAttacker(**attack_args)
     elif attack_config['method'] == 'RayST':
         attacker = RaySTAttacker(**attack_args)
+    elif attack_config['method'] == 'power_bounce':
+        attack_args['augment_method'] = attack_config['augment_method']
+        attack_args['T'] = attack_config['T']
+        attacker = PowerBounceAttacker(**attack_args)
     return attacker

@@ -4,7 +4,7 @@ MODEL_NAME = ["resnet50", "densenet121"]
 
 SUPPORTED_DATAMODELS = ["cifar10-resnet50", "cifar100-resnet50", "imagenet-densenet121"]
 
-SUPPORTED_ATTACK_METHOD = ["RayS", "GuidedRay", "GuidedRay-W", "HSJA", "bounce", "Tangent", "Sign_OPT_Linf", "RayST"]
+SUPPORTED_ATTACK_METHOD = ["RayS", "GuidedRay", "HSJA", "bounce", "Tangent", "Sign_OPT_Linf", "RayST", "power_bounce", "fast_test"]
 
 SUPPORTED_DEFENSE_MODEL = ['adv_train', 'TRADES']
 
