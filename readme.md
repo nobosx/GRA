@@ -165,6 +165,6 @@ python ./accuracy_analysis.py
 
 ## Downloading the ImageNet Dataset and Our Attack Records
 
-If you want to run attacks on the ImageNet dataset, please first download the compressed  dataset file `imagenet.zip` from https://drive.google.com/file/d/1TI-Hp97pRCGANPTfr7kh2h56XbCvfS2z/view?usp=sharing and unzip it into the folder `./data`.
+If you want to run attacks on the ImageNet dataset, please first download the compressed  dataset file `imagenet.zip` from [https://drive.google.com/file/d/1TI-Hp97pRCGANPTfr7kh2h56XbCvfS2z/view?usp=sharing](https://drive.google.com/file/d/1p640m5on-CgeGkrPNopwyxgHNlG7gWUn/view?usp=sharing) and unzip it into the folder `./data`.
 
-We provide the attack records  of these attack experiments obtained on our environment. You can download the compressed zip file `logs.zip` from https://drive.google.com/file/d/1iMdgbIc7le6JUSZ_KjXuPIkUILsqAgp9/view?usp=sharing and unzip it into the root folder of this repository. Once it is done, you can run the script `./analyze_results.py` to analyze the results.
+We provide the attack records  of these attack experiments obtained on our environment. You can download the compressed zip file `logs.zip` from [https://drive.google.com/file/d/1iMdgbIc7le6JUSZ_KjXuPIkUILsqAgp9/view?usp=sharing](https://drive.google.com/file/d/1dDLD1JkgWkZUZdeWLQ4Nez4al3ogVv5n/view?usp=sharing) and unzip it into the root folder of this repository. Once it is done, you can run the script `./analyze_results.py` to analyze the results.
